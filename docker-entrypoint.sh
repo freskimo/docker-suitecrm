@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 # mysql -u {username} -p{password} -h {remote server ip} {DB name}
