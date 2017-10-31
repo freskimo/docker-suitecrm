@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  app:
+    build: .
+    env_file: .env
+    ports:
+      - "8080:80"
+    links:
+      - "db"
+
+  db:
+    image: mysql
+    env_file: .env
+    volumes:
+      - dbstore:/var/lib/mysql
+
+volumes:
+  dbstore:
